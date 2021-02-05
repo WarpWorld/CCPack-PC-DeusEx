@@ -12,14 +12,14 @@ public class DeusEx : SimpleTCPPack
 
     public DeusEx(IPlayer player, Func<CrowdControlBlock, bool> responseHandler, Action<object> statusUpdateHandler) : base(player, responseHandler, statusUpdateHandler) { }
 
-    public override Game Game => new Game(54, "Deus Ex Randomizer", "dxrando", "PC", ConnectorType.SimpleTCPConnector);
+    public override Game Game => new Game(90, "Deus Ex", "DeusEx", "PC", ConnectorType.SimpleTCPConnector);
 
     public override List<Effect> Effects => new List<Effect>
     {
         new Effect("Trigger the Killswitch", "kill"),
         new Effect("Poison the Player", "poison"),
         new Effect("Glass Legs", "glass_legs"),
-        new Effect("Give Health", "give_health",new[]{"amount"}),
+        new Effect("Give Health", "give_health",new[]{"amount100"}),
         new Effect("Set On Fire", "set_fire"),
         new Effect("Drop a live grenade", "drop_grenade",new[]{"grenades"}),
         new Effect("Give one Medkit", "give_medkit"),
@@ -28,10 +28,10 @@ public class DeusEx : SimpleTCPPack
         new Effect("Drop Selected Item", "drop_selected_item"),
         new Effect("Enable Matrix Mode (1 Minute)", "matrix"),
         new Effect("Give Player EMP Field (15 seconds)", "emp_field"),
-        new Effect("Give Bioelectric Energy", "give_energy",new[]{"amount"}),
+        new Effect("Give Bioelectric Energy", "give_energy",new[]{"amount100"}),
         new Effect("Give one Biocell", "give_biocell"),
-        new Effect("Give skill points", "give_skillpoints",new[]{"spslider"}),
-        new Effect("Remove skill points", "remove_skillpoints",new[]{"spslider"}),
+        new Effect("Give skill points", "give_skillpoints",new[]{"skillPoints9999"}),
+        new Effect("Remove skill points", "remove_skillpoints",new[]{"skillPoints9999"}),
         new Effect("Disable Jump (1 minute)", "disable_jump"),
         new Effect("Gotta go fast (1 minute)", "gotta_go_fast"),
         new Effect("Slow like snail (1 minute)", "gotta_go_slow"),
@@ -39,8 +39,8 @@ public class DeusEx : SimpleTCPPack
         new Effect("Go Third-Person (1 minute)","third_person"),
         new Effect("Take Double Damage (1 minute)","dmg_double"),
         new Effect("Take Half Damage (1 minute)","dmg_half"),
-        new Effect("Give credits", "add_credits",new[]{"creditsslider"}),
-        new Effect("Remove credits", "remove_credits",new[]{"creditsslider"}),
+        new Effect("Give credits", "add_credits",new[]{"credits9999"}),
+        new Effect("Remove credits", "remove_credits",new[]{"credits9999"}),
         new Effect("Upgrade a Flamethrower to a LAMThrower (1 minute)", "lamthrower"),
 
         new Effect("Give Grenade","give_grenade",new[]{"grenades"}),
@@ -89,9 +89,9 @@ public class DeusEx : SimpleTCPPack
 
     public override List<ItemType> ItemTypes => new List<ItemType>(new[]
     {
-        new ItemType("Credits", "creditsslider", ItemType.Subtype.Slider, "{\"min\":1,\"max\":9999}"),
-        new ItemType("Skill Points", "spslider", ItemType.Subtype.Slider, "{\"min\":1,\"max\":9999}"),
-        new ItemType("Amount","amount",ItemType.Subtype.Slider, "{\"min\":1,\"max\":100}"),
+        new ItemType("Credits", "credits9999", ItemType.Subtype.Slider, "{\"min\":1,\"max\":9999}"),
+        new ItemType("Skill Points", "skillPoints9999", ItemType.Subtype.Slider, "{\"min\":1,\"max\":9999}"),
+        new ItemType("Amount","amount100",ItemType.Subtype.Slider, "{\"min\":1,\"max\":100}"),
         new ItemType("Augmentation", "augs", ItemType.Subtype.ItemList),
         new ItemType("Grenades", "grenades", ItemType.Subtype.ItemList),
         new ItemType("Weapons", "weapons", ItemType.Subtype.ItemList)
