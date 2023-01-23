@@ -17,7 +17,7 @@ namespace CrowdControl.Games.Packs
 
         public override Game Game { get; } = new(90, "Deus Ex Randomizer", "DeusEx", "PC", ConnectorType.SimpleTCPConnector);
 
-        public override List<Effect> Effects => new()
+        public override List<Effect> Effects { get; } = new()
         {
             //General Effects
             new Effect("Trigger the Killswitch", "kill"),
