@@ -70,14 +70,14 @@ public class DeusEx : SimpleTCPPack
         //new Effect("Spawn Enemies/Allies","spawnpawns",ItemKind.Folder), //New for fourth Crowd Control batch
         new("Spawn Medical Bot", "spawnfriendly_medicalbot") { Category = "Spawn Enemies/Allies",Price = 75,Description = "Spawn a medical bot for healing and augmentation installation" }, //New for fourth Crowd Control batch
         new("Spawn Repair Bot", "spawnfriendly_repairbot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a repair bot to restore bioelectric energy" }, //New for fourth Crowd Control batch
-        new("Spawn hostile Spider Bot", "spawnenemy_spiderbot2") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a spiderbot that will hunt the player down" }, //New for fourth Crowd Control batch
-        new("Spawn hostile MJ12 Commando", "spawnenemy_mj12commando") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn an MJ12 Commando who will try to take the player out" }, //New for fourth Crowd Control batch
-        new("Spawn hostile Security Bot", "spawnenemy_securitybot4") { Category = "Spawn Enemies/Allies",Price = 25,Description = "Spawn a security bot to fill the player with holes" }, //New for fourth Crowd Control batch
-        new("Spawn friendly Security Bot", "spawnfriendly_securitybot4") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a security bot to help the player out" }, //New for fourth Crowd Control batch
-        new("Spawn hostile Military Bot", "spawnenemy_militarybot") { Category = "Spawn Enemies/Allies",Price = 40,Description = "Spawn a huge military bot to blow the player to pieces" }, //New for fourth Crowd Control batch
-        new("Spawn friendly Military Bot", "spawnfriendly_militarybot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a military bot to give the player a hand" }, //New for fourth Crowd Control batch
-        new("Spawn hostile Doberman", "spawnenemy_doberman") { Category = "Spawn Enemies/Allies",Price = 5,Description = "Spawn a doberman to tear you to shreds" }, //New for fourth Crowd Control batch
-        new("Spawn hostile Greasel", "spawnenemy_greasel") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn a hostile greasel to poison you to death" }, //New for fourth Crowd Control batch
+        new("Spawn Spider Bot", "spawnenemy_spiderbot2") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a spiderbot that will hunt the player down", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn MJ12 Commando", "spawnenemy_mj12commando") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn an MJ12 Commando who will try to take the player out", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn Security Bot", "spawnenemy_securitybot4") { Category = "Spawn Enemies/Allies",Price = 25,Description = "Spawn a security bot to fill the player with holes", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn Security Bot", "spawnfriendly_securitybot4") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a security bot to help the player out", Note="Friendly" }, //New for fourth Crowd Control batch
+        new("Spawn Military Bot", "spawnenemy_militarybot") { Category = "Spawn Enemies/Allies",Price = 40,Description = "Spawn a huge military bot to blow the player to pieces", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn Military Bot", "spawnfriendly_militarybot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a military bot to give the player a hand", Note="Friendly" }, //New for fourth Crowd Control batch
+        new("Spawn Doberman", "spawnenemy_doberman") { Category = "Spawn Enemies/Allies",Price = 5,Description = "Spawn a doberman to tear you to shreds", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn Greasel", "spawnenemy_greasel") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn a hostile greasel to poison you to death", Note="Hostile" }, //New for fourth Crowd Control batch
 
         //Items
         //new Effect("Give Items","giveitems",ItemKind.Folder), //New folder for third batch
