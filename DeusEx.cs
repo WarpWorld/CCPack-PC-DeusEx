@@ -31,9 +31,9 @@ public class DeusEx : SimpleTCPPack
         new("Drop Selected Item", "drop_selected_item"){Price = 2,Description = "Toss the currently held weapon out in front of the player"},
         new("Enable Matrix Mode", "matrix"){Price = 5,Description = "Make the player see the code behind the game...",Duration=60},
         new("Give Player EMP Field", "emp_field"){Price = 25,Description = "Make all electronics around the player go haywire for 15 seconds!",Duration=15},
-        new("Give Bioelectric Energy (x10)", "give_energy") { Quantity = 100,Price = 1,Description = "Top up the players battery by a bit" },
-        new("Give Skill Points (x100)", "give_skillpoints") { Quantity = 1000,Price = 5,Description = "Give the player some skill points" }, //Updated text for second Crowd Control batch
-        new("Remove Skill  Points (x100)", "remove_skillpoints") { Quantity = 1000,Price = 10,Description = "Take some skill points away from the player" }, //Updated text for second Crowd Control batch
+        new("Give Bioelectric Energy", "give_energy") { Quantity = 100,Price = 1,Description = "Top up the players battery by a bit", Note="x10" },
+        new("Give Skill Points", "give_skillpoints") { Quantity = 1000,Price = 5,Description = "Give the player some skill points", Note="x100" }, //Updated text for second Crowd Control batch
+        new("Remove Skill  Points", "remove_skillpoints") { Quantity = 1000,Price = 10,Description = "Take some skill points away from the player", Note="x100" }, //Updated text for second Crowd Control batch
         new("Disable Jump", "disable_jump"){Price = 5,Description = "Lock up the players knees and prevent them from jumping",Duration=60},
         new("Gotta Go Fast", "gotta_go_fast"){Price = 5,Description = "Make the player go extremely fast!",Duration=60},
         new("Slow Like Snail", "gotta_go_slow"){Price = 5,Description = "Make the player go very slow...",Duration=60},
@@ -41,8 +41,8 @@ public class DeusEx : SimpleTCPPack
         new("Go Third-Person","third_person"){Price = 5,Description = "Change the game into a third person shooter for a minute!",Duration=60},
         new("Take Double Damage","dmg_double"){Price = 10,Description = "Make the player weaker so they take double damage!",Duration=60},
         new("Take Half Damage","dmg_half"){Price = 5,Description = "Make the player tougher so they take half damage!",Duration=60},
-        new("Give Credits (x100)", "add_credits") { Quantity = 1000,Price = 2,Description = "Make it rain on the player and give them some spare cash!" }, //Updated for text second Crowd Control batch
-        new("Remove Credits (x100)", "remove_credits") { Quantity = 1000,Price = 5,Description = "Take some money away from the player" }, //Updated text for second Crowd Control batch
+        new("Give Credits", "add_credits") { Quantity = 1000,Price = 2,Description = "Make it rain on the player and give them some spare cash!", Note="x100" }, //Updated for text second Crowd Control batch
+        new("Remove Credits", "remove_credits") { Quantity = 1000,Price = 5,Description = "Take some money away from the player", Note="x100" }, //Updated text for second Crowd Control batch
         new("Upgrade a Flamethrower to a LAMThrower", "lamthrower"){Price = 30,Description = "If the player is currently carrying a flamethrower, it only shoots live LAMs instead of napalm",Duration=60},
 
         new("Ask a Question","ask_a_question"){Price = 5,Description = "Make a dialog box appear on screen with a question while the game continues in behind!"}, //New for second Crowd Control batch
@@ -109,7 +109,7 @@ public class DeusEx : SimpleTCPPack
         new("Add/Upgrade Synthetic Heart", "add_augheartlung") { Category = "Augmentations",Price = 60,Description = "Add or upgrade the synthetic heart aug" },
         new("Add/Upgrade Microfibral Muscle", "add_augmuscle") { Category = "Augmentations",Price = 40,Description = "Add or upgrade the microfibral muscle aug" },
         new("Add/Upgrade Power Recirculator", "add_augpower") { Category = "Augmentations",Price = 60,Description = "Add or upgrade the power recirculator aug" },
-        new("Add/Upgrade Radar Transparancy", "add_augradartrans") { Category = "Augmentations",Price = 60,Description = "Add or upgrade the radar transparency aug" },
+        new("Add/Upgrade Radar Transparency", "add_augradartrans") { Category = "Augmentations",Price = 60,Description = "Add or upgrade the radar transparency aug" },
         new("Add/Upgrade Energy Shield", "add_augshield") { Category = "Augmentations",Price = 20,Description = "Add or upgrade the energy shield aug" },
         new("Add/Upgrade Speed Enhancement", "add_augspeed") { Category = "Augmentations",Price = 60,Description = "Add or upgrade the speed enhancement aug" },
         new("Add/Upgrade Run Silent", "add_augstealth") { Category = "Augmentations",Price = 10,Description = "Add or upgrade the run silent aug" },
@@ -128,7 +128,7 @@ public class DeusEx : SimpleTCPPack
         new("Remove/Downgrade Synthetic Heart", "rem_augheartlung") { Category = "Augmentations",Price = 70,Description = "Remove or downgrade the synthetic heart aug" },
         new("Remove/Downgrade Microfibral Muscle", "rem_augmuscle") { Category = "Augmentations",Price = 60,Description = "Remove or downgrade the microfibral muscle aug" },
         new("Remove/Downgrade Power Recirculator", "rem_augpower") { Category = "Augmentations",Price = 60,Description = "Remove or downgrade the power recirculator aug" },
-        new("Remove/Downgrade Radar Transparancy", "rem_augradartrans") { Category = "Augmentations",Price = 60,Description = "Remove or downgrade the radar transparency aug" },
+        new("Remove/Downgrade Radar Transparency", "rem_augradartrans") { Category = "Augmentations",Price = 60,Description = "Remove or downgrade the radar transparency aug" },
         new("Remove/Downgrade Energy Shield", "rem_augshield") { Category = "Augmentations",Price = 30,Description = "Remove or downgrade the energy shield aug" },
         new("Remove/Downgrade Speed Enhancement", "rem_augspeed") { Category = "Augmentations",Price = 80,Description = "Remove or downgrade the speed enhancement aug" },
         new("Remove/Downgrade Run Silent", "rem_augstealth") { Category = "Augmentations",Price = 20,Description = "Remove or downgrade the run silent aug" },
@@ -176,10 +176,10 @@ public class DeusEx : SimpleTCPPack
         //Ammo
         //new Effect("Give Ammo","giveammo",ItemKind.Folder),
 
-        new("Give 10mm Ammo (Pistols)", "give_ammo10mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 10mm ammo" }, //New for second Crowd Control batch
-        new("Give 20mm Ammo (Assault Rifle)", "give_ammo20mm") {  Quantity = 100, Category = "Give Ammo",Price = 15,Description = "Give the player some 20mm high explosive ammo" }, //New for second Crowd Control batch
-        new("Give 7.62mm Ammo (Assault Rifle)", "give_ammo762mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 7.62mm ammo" }, //New for second Crowd Control batch
-        new("Give 30.06mm Ammo (Sniper Rifle)", "give_ammo3006") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 30.06mm ammo" }, //New for second Crowd Control batch
+        new("Give 10mm Ammo", "give_ammo10mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 10mm ammo", Note="Pistols" }, //New for second Crowd Control batch
+        new("Give 20mm Ammo", "give_ammo20mm") {  Quantity = 100, Category = "Give Ammo",Price = 15,Description = "Give the player some 20mm high explosive ammo", Note="Assault Rifle" }, //New for second Crowd Control batch
+        new("Give 7.62mm Ammo", "give_ammo762mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 7.62mm ammo", Note="Assault Rifle" }, //New for second Crowd Control batch
+        new("Give 30.06mm Ammo", "give_ammo3006") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 30.06mm ammo", Note="Sniper Rifle" }, //New for second Crowd Control batch
         new("Give Prod Charger", "give_ammobattery") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player a prod charger" }, //New for second Crowd Control batch
         new("Give Darts", "give_ammodart") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some darts" }, //New for second Crowd Control batch
         new("Give Flare Darts", "give_ammodartflare") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some flare darts" }, //New for second Crowd Control batch
