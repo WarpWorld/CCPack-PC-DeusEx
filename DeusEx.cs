@@ -29,25 +29,25 @@ public class DeusEx : SimpleTCPPack
         new("Full Heal", "full_heal"){Price = 30,Description = "Fully heal the player"},
         new("Drunk Mode", "drunk_mode"){Price = 10,Description = "Let the player overindulge with some nice alcohol"},
         new("Drop Selected Item", "drop_selected_item"){Price = 2,Description = "Toss the currently held weapon out in front of the player"},
-        new("Enable Matrix Mode", "matrix"){Price = 5,Description = "Make the player see the code behind the game...",Duration=60},
         new("Give Player EMP Field", "emp_field"){Price = 25,Description = "Make all electronics around the player go haywire for 15 seconds!",Duration=15},
-        new("Give Bioelectric Energy", "give_energy") { Quantity = 100,Price = 1,Description = "Top up the players battery by a bit", Note="x10" },
-        new("Give Skill Points", "give_skillpoints") { Quantity = 1000,Price = 5,Description = "Give the player some skill points", Note="x100" }, //Updated text for second Crowd Control batch
-        new("Remove Skill  Points", "remove_skillpoints") { Quantity = 1000,Price = 10,Description = "Take some skill points away from the player", Note="x100" }, //Updated text for second Crowd Control batch
+        new("Give Bioelectric Energy (x10)", "give_energy") { Quantity = 100,Price = 1,Description = "Top up the players battery by a bit" },
+        new("Give Skill Points (x100)", "give_skillpoints") { Quantity = 1000,Price = 5,Description = "Give the player some skill points" }, //Updated text for second Crowd Control batch
+        new("Remove Skill  Points (x100)", "remove_skillpoints") { Quantity = 1000,Price = 10,Description = "Take some skill points away from the player" }, //Updated text for second Crowd Control batch
         new("Disable Jump", "disable_jump"){Price = 5,Description = "Lock up the players knees and prevent them from jumping",Duration=60},
         new("Gotta Go Fast", "gotta_go_fast"){Price = 5,Description = "Make the player go extremely fast!",Duration=60},
         new("Slow Like Snail", "gotta_go_slow"){Price = 5,Description = "Make the player go very slow...",Duration=60},
         new("Ice Physics!","ice_physics"){Price = 10,Description = "Make the ground freeze up and become as slippery as a skating rink!",Duration=60},
-        new("Go Third-Person","third_person"){Price = 5,Description = "Change the game into a third person shooter for a minute!",Duration=60},
         new("Take Double Damage","dmg_double"){Price = 10,Description = "Make the player weaker so they take double damage!",Duration=60},
         new("Take Half Damage","dmg_half"){Price = 5,Description = "Make the player tougher so they take half damage!",Duration=60},
-        new("Give Credits", "add_credits") { Quantity = 1000,Price = 2,Description = "Make it rain on the player and give them some spare cash!", Note="x100" }, //Updated for text second Crowd Control batch
-        new("Remove Credits", "remove_credits") { Quantity = 1000,Price = 5,Description = "Take some money away from the player", Note="x100" }, //Updated text for second Crowd Control batch
+        new("Give Credits (x100)", "add_credits") { Quantity = 1000,Price = 2,Description = "Make it rain on the player and give them some spare cash!" }, //Updated for text second Crowd Control batch
+        new("Remove Credits (x100)", "remove_credits") { Quantity = 1000,Price = 5,Description = "Take some money away from the player" }, //Updated text for second Crowd Control batch
         new("Upgrade a Flamethrower to a LAMThrower", "lamthrower"){Price = 30,Description = "If the player is currently carrying a flamethrower, it only shoots live LAMs instead of napalm",Duration=60},
 
         new("Ask a Question","ask_a_question"){Price = 5,Description = "Make a dialog box appear on screen with a question while the game continues in behind!"}, //New for second Crowd Control batch
         new("Nudge","nudge"){Price = 1,Description = "Just ever so slightly... nudge... the player in a random direction"}, //New for second Crowd Control batch
         new("Swap Player with another human","swap_player_position"){Price = 40,Description = "Finds another human somewhere in the current level and swaps their position with the player!"}, //New for second Crowd Control batch
+        new("Swap all enemies positions","swap_enemies"){Price = 20,Description = "Shuffles all the enemies in the level into each others locations!"}, //New for fifth Crowd Control batch
+        new("Swap all item positions","swap_items"){Price = 5,Description = "Shuffles all the inventory items in the level into each others locations!"}, //New for fifth Crowd Control batch
         new("Float Away","floaty_physics"){Price = 100,Description = "Suddenly gravity feels very light and everything starts floating up into the sky...",Duration=30}, //New for second Crowd Control batch
         new("Floor is Lava","floor_is_lava"){Price = 75,Description = "Floor is lava!  If the player doesn't keep jumping or get up on top of something, they're gonna burn!",Duration=60}, //New for second Crowd Control batch
         new("Invert Mouse Controls","invert_mouse"){Price = 20,Description = "Up is down and down is up!",Duration=60}, //New for second Crowd Control batch
@@ -55,32 +55,35 @@ public class DeusEx : SimpleTCPPack
         new("Earthquake","earthquake"){Price = 25,Description = "Set off a massive earthquake in the game!",Duration=30}, //New for fourth Crowd Control batch
         new("Full Bioelectric Energy","give_full_energy"){Price = 5,Description = "Completely fill the players bioelectric energy"}, //New for fourth Crowd Control batch
         new("Trigger all alarms","trigger_alarms"){Price = 5,Description = "Set off every alarm panel and security camera in the current level to make sure all the enemies are on high alert!"}, //New for fourth Crowd Control batch
-        new("Flip camera upside down","flipped"){Price = 20,Description = "Australia mode",Duration=60}, //New for fourth Crowd Control batch
-        new("Flip camera sideways","limp_neck"){Price = 20,Description = "Just turn the screen to the side!",Duration=60}, //New for fourth Crowd Control batch
-        new("Do a barrel roll!","barrel_roll"){Price = 25,Description = "The camera does an ever so slow barrel roll over the course of a minute...",Duration=60}, //New for fourth Crowd Control batch
-        new("Set off a Flashbang", "flashbang"){Price = 5,Description = "Set off a flashbang in the players face"}, //New for fourth Crowd Control batch
         new("Eat Beans", "eat_beans"){Price = 5,Description = "Force feed the player a bunch of beans and witness the consequences!",Duration=60}, //New for fourth Crowd Control batch
         new("Fire the current weapon", "fire_weapon"){Price = 5,Description = "Fire whatever weapon the player is holding!"}, //New for fourth Crowd Control batch
         new("Switch to next item", "next_item"){Price = 2,Description = "Switch to the next item in the players item belt"}, //New for fourth Crowd Control batch
         new("Switch to next HUD color scheme", "next_hud_color"){Price = 1,Description = "Maybe the current color scheme doesn't look so good?"}, //New for fourth Crowd Control batch
         new("Quick Save", "quick_save"){Price = 10,Description = "Stir up some real trouble..."}, //New for fourth Crowd Control batch
         new("Quick Load", "quick_load"){Price = 20,Description = "Hope that last quick save wasn't too far back, or in too much danger!"}, //New for fourth Crowd Control batch
+        new("Drop a piano on the player", "drop_piano"){Price = 10,Description = "Spawn a piano above the player to drop it on them, just like in the cartoons!"}, //New for fifth Crowd Control batch, v2.6
+        new("Toggle the Flashlight", "toggle_flashlight"){Price = 1,Description = "Toggle the flashlight!"}, //New for fifth Crowd Control batch, v2.6
+        new("Heal all Enemies", "heal_all_enemies"){Price = 10,Description = "Fully heal all enemies in the current level!"}, //New for fifth Crowd Control batch, v2.6
+        new("Make Player Radioactive", "radioactive"){Price = 10,Description = "The player becomes radioactive and starts hurting nearby people!",Duration=60}, //New for fifth Crowd Control batch, v2.6
+        new("Corpse Explosion", "corpse_explosion"){Price = 10,Description = "Fill up to 5 nearby corpses with energy, causing them to explode violently!"}, //New for fifth Crowd Control batch, v2.6
 
         //Spawn Enemies/Allies
-        //new Effect("Spawn Enemies/Allies","spawnpawns",ItemKind.Folder), //New for fourth Crowd Control batch
+        //new("Spawn Enemies/Allies","spawnpawns",ItemKind.Folder), //New for fourth Crowd Control batch
         new("Spawn Medical Bot", "spawnfriendly_medicalbot") { Category = "Spawn Enemies/Allies",Price = 75,Description = "Spawn a medical bot for healing and augmentation installation" }, //New for fourth Crowd Control batch
         new("Spawn Repair Bot", "spawnfriendly_repairbot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a repair bot to restore bioelectric energy" }, //New for fourth Crowd Control batch
-        new("Spawn Spider Bot", "spawnenemy_spiderbot2") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a spiderbot that will hunt the player down", Note="Hostile" }, //New for fourth Crowd Control batch
-        new("Spawn MJ12 Commando", "spawnenemy_mj12commando") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn an MJ12 Commando who will try to take the player out", Note="Hostile" }, //New for fourth Crowd Control batch
-        new("Spawn Security Bot", "spawnenemy_securitybot4") { Category = "Spawn Enemies/Allies",Price = 25,Description = "Spawn a security bot to fill the player with holes", Note="Hostile" }, //New for fourth Crowd Control batch
-        new("Spawn Security Bot", "spawnfriendly_securitybot4") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a security bot to help the player out", Note="Friendly" }, //New for fourth Crowd Control batch
-        new("Spawn Military Bot", "spawnenemy_militarybot") { Category = "Spawn Enemies/Allies",Price = 40,Description = "Spawn a huge military bot to blow the player to pieces", Note="Hostile" }, //New for fourth Crowd Control batch
-        new("Spawn Military Bot", "spawnfriendly_militarybot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a military bot to give the player a hand", Note="Friendly" }, //New for fourth Crowd Control batch
-        new("Spawn Doberman", "spawnenemy_doberman") { Category = "Spawn Enemies/Allies",Price = 5,Description = "Spawn a doberman to tear you to shreds", Note="Hostile" }, //New for fourth Crowd Control batch
-        new("Spawn Greasel", "spawnenemy_greasel") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn a hostile greasel to poison you to death", Note="Hostile" }, //New for fourth Crowd Control batch
+        new("Spawn hostile Spider Bot", "spawnenemy_spiderbot2") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a spiderbot that will hunt the player down" }, //New for fourth Crowd Control batch
+        new("Spawn hostile MJ12 Commando", "spawnenemy_mj12commando") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn an MJ12 Commando who will try to take the player out" }, //New for fourth Crowd Control batch
+        new("Spawn hostile Security Bot", "spawnenemy_securitybot4") { Category = "Spawn Enemies/Allies",Price = 25,Description = "Spawn a security bot to fill the player with holes" }, //New for fourth Crowd Control batch
+        new("Spawn friendly Security Bot", "spawnfriendly_securitybot4") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a security bot to help the player out" }, //New for fourth Crowd Control batch
+        new("Spawn hostile Military Bot", "spawnenemy_militarybot") { Category = "Spawn Enemies/Allies",Price = 40,Description = "Spawn a huge military bot to blow the player to pieces" }, //New for fourth Crowd Control batch
+        new("Spawn friendly Military Bot", "spawnfriendly_militarybot") { Category = "Spawn Enemies/Allies",Price = 30,Description = "Spawn a military bot to give the player a hand" }, //New for fourth Crowd Control batch
+        new("Spawn hostile Doberman", "spawnenemy_doberman") { Category = "Spawn Enemies/Allies",Price = 5,Description = "Spawn a doberman to tear you to shreds" }, //New for fourth Crowd Control batch
+        new("Spawn hostile Greasel", "spawnenemy_greasel") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Spawn a hostile greasel to poison you to death" }, //New for fourth Crowd Control batch
+        new("Spawn a nasty rat", "nasty_rat") { Category = "Spawn Enemies/Allies",Price = 15,Description = "Spawn a huge rat that throws LAMs" }, //New for fifth Crowd Control batch
+        new("Raise the Dead", "raise_dead") { Category = "Spawn Enemies/Allies",Price = 10,Description = "Resurrect up to 5 nearby enemies.  They're out for blood now!" }, //New for fifth Crowd Control batch
 
         //Items
-        //new Effect("Give Items","giveitems",ItemKind.Folder), //New folder for third batch
+        //new("Give Items","giveitems",ItemKind.Folder), //New folder for third batch
         new("Give a Medkit", "give_medkit") { Category = "Give Items",Price = 15,Description = "Give the player a medkit" }, //Moved into new folder for third batch
         new("Give a Biocell", "give_bioelectriccell") { Category = "Give Items",Price = 15,Description = "Give the player a bioelectric cell" }, //Moved into new folder for third batch
         new("Give a Fire Extinguisher", "give_fireextinguisher") { Category = "Give Items",Price = 5,Description = "Give the player a fire extinguisher" }, //New for third Crowd Control batch
@@ -94,8 +97,8 @@ public class DeusEx : SimpleTCPPack
         new("Give a set of Tech Goggles", "give_techgoggles") { Category = "Give Items",Price = 5,Description = "Give the player a set of tech goggles" }, //New for Fourth Crowd Control batch
 
         //Add/Remove Augs
-        //new Effect("Add/Upgrade Augmentations","addaugs",ItemKind.Folder),
-        //new Effect("Remove/Downgrade Augmentations","remaugs",ItemKind.Folder),
+        //new("Add/Upgrade Augmentations","addaugs",ItemKind.Folder),
+        //new("Remove/Downgrade Augmentations","remaugs",ItemKind.Folder),
 
         new("Add/Upgrade Aqualung", "add_augaqualung") { Category = "Augmentations",Price = 10,Description = "Add or upgrade the aqualung aug" },
         new("Add/Upgrade Ballistic Protection", "add_augballistic") { Category = "Augmentations",Price = 40,Description = "Add or upgrade the ballistic protection aug" },
@@ -137,7 +140,7 @@ public class DeusEx : SimpleTCPPack
 
 
         //Drop Grenades
-        //new Effect("Drop a live grenade","dropgrenade",ItemKind.Folder),
+        //new("Drop a live grenade","dropgrenade",ItemKind.Folder),
 
         new("Drop a Live LAM", "drop_lam") { Category = "Drop Live Grenade",Price = 30,Description = "Drop a LAM on the ground, ready to explode!" },
         new("Drop a Live EMP Grenade", "drop_empgrenade") { Category = "Drop Live Grenade",Price = 10,Description = "Drop an EMP grenade on the ground, ready to take away your energy!" },
@@ -146,7 +149,7 @@ public class DeusEx : SimpleTCPPack
 
 
         //Weapons
-        //new Effect("Give Weapons","giveweapon",ItemKind.Folder),
+        //new("Give Weapons","giveweapon",ItemKind.Folder),
 
         new("Give Flamethrower", "give_weaponflamethrower") { Category = "Give Weapon",Price = 25,Description = "Give the player a flamethrower" },
         new("Give GEP Gun", "give_weapongepgun") { Category = "Give Weapon",Price = 25,Description = "Give the player a GEP gun" },
@@ -172,14 +175,16 @@ public class DeusEx : SimpleTCPPack
         new("Give Gas Grenade", "give_weapongasgrenade") { Category = "Give Weapon",Price = 2,Description = "Give the player a gas grenade" },  //New for second Crowd Control batch
         new("Give Scrambler Grenade", "give_weaponnanovirusgrenade") { Category = "Give Weapon",Price = 5,Description = "Give the player a scrambler grenade" },  //New for second Crowd Control batch
         new("Give PS40","give_weaponhideagun") { Category = "Give Weapon",Price = 10,Description = "Give the player a PS40" },
+        new("Give all enemies a LAW", "giveenemyweapon_weaponlaw") { Category = "Give Weapon",Price = 40,Description = "Give all enemies a LAW" }, //New for fifth Crowd Control batch, v2.6
+        new("Give all enemies a PS40", "giveenemyweapon_weaponhideagun") { Category = "Give Weapon",Price = 30,Description = "Give all enemies a PS40" }, //New for fifth Crowd Control batch, v2.6
 
         //Ammo
-        //new Effect("Give Ammo","giveammo",ItemKind.Folder),
+        //new("Give Ammo","giveammo",ItemKind.Folder),
 
-        new("Give 10mm Ammo", "give_ammo10mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 10mm ammo", Note="Pistols" }, //New for second Crowd Control batch
-        new("Give 20mm Ammo", "give_ammo20mm") {  Quantity = 100, Category = "Give Ammo",Price = 15,Description = "Give the player some 20mm high explosive ammo", Note="Assault Rifle" }, //New for second Crowd Control batch
-        new("Give 7.62mm Ammo", "give_ammo762mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 7.62mm ammo", Note="Assault Rifle" }, //New for second Crowd Control batch
-        new("Give 30.06mm Ammo", "give_ammo3006") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 30.06mm ammo", Note="Sniper Rifle" }, //New for second Crowd Control batch
+        new("Give 10mm Ammo (Pistols)", "give_ammo10mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 10mm ammo" }, //New for second Crowd Control batch
+        new("Give 20mm Ammo (Assault Rifle)", "give_ammo20mm") {  Quantity = 100, Category = "Give Ammo",Price = 15,Description = "Give the player some 20mm high explosive ammo" }, //New for second Crowd Control batch
+        new("Give 7.62mm Ammo (Assault Rifle)", "give_ammo762mm") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 7.62mm ammo" }, //New for second Crowd Control batch
+        new("Give 30.06mm Ammo (Sniper Rifle)", "give_ammo3006") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some 30.06mm ammo" }, //New for second Crowd Control batch
         new("Give Prod Charger", "give_ammobattery") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player a prod charger" }, //New for second Crowd Control batch
         new("Give Darts", "give_ammodart") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some darts" }, //New for second Crowd Control batch
         new("Give Flare Darts", "give_ammodartflare") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some flare darts" }, //New for second Crowd Control batch
@@ -190,6 +195,16 @@ public class DeusEx : SimpleTCPPack
         new("Give Rockets", "give_ammorocket") {  Quantity = 100, Category = "Give Ammo",Price = 10,Description = "Give the player some rockets" }, //New for second Crowd Control batch
         new("Give WP Rockets", "give_ammorocketwp") {  Quantity = 100, Category = "Give Ammo",Price = 15,Description = "Give the player some WP rockets" }, //New for second Crowd Control batch
         new("Give Sabot Shells", "give_ammosabot") {  Quantity = 100, Category = "Give Ammo",Price = 20,Description = "Give the player some Sabot shells" }, //New for second Crowd Control batch
-        new("Give Shotgun Shells", "give_ammoshell") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some shotgun shells" } //New for second Crowd Control batch
+        new("Give Shotgun Shells", "give_ammoshell") {  Quantity = 100, Category = "Give Ammo",Price = 5,Description = "Give the player some shotgun shells" }, //New for second Crowd Control batch
+
+        //Camera Effects
+        new("Flip camera upside down","flipped"){Category = "Camera Effects",Price = 20,Description = "Australia mode",Duration=60}, //New for fourth Crowd Control batch
+        new("Flip camera sideways","limp_neck"){Category = "Camera Effects",Price = 20,Description = "Just turn the screen to the side!",Duration=60}, //New for fourth Crowd Control batch
+        new("Do a barrel roll!","barrel_roll"){Category = "Camera Effects",Price = 25,Description = "The camera does an ever so slow barrel roll over the course of a minute...",Duration=60}, //New for fourth Crowd Control batch
+        new("Go Third-Person","third_person"){Category = "Camera Effects",Price = 5,Description = "Change the game into a third person shooter for a minute!",Duration=60},
+        new("Enable Matrix Mode", "matrix"){Category = "Camera Effects",Price = 5,Description = "Make the player see the code behind the game...",Duration=60},
+        new("Set off a Flashbang", "flashbang"){Category = "Camera Effects",Price = 5,Description = "Set off a flashbang in the players face"}, //New for fourth Crowd Control batch
+        new("Resident Evil Mode", "resident_evil"){Category = "Camera Effects",Price = 20,Description = "Switch the game to fixed camera angles!  Very spooky!",Duration=60}, //New for fifth Crowd Control batch
+        new("Doom Mode", "doom_mode"){Category = "Camera Effects",Price = 5,Description = "Drag the player to hell, a place where there is no looking up or down!",Duration=60} //New for fifth Crowd Control batch
     };
 }
