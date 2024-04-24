@@ -1,5 +1,4 @@
-﻿using System;
-using CrowdControl.Common;
+﻿using CrowdControl.Common;
 using JetBrains.Annotations;
 using ConnectorType = CrowdControl.Common.ConnectorType;
 
