@@ -1,11 +1,12 @@
-﻿using CrowdControl.Common;
+﻿using ConnectorLib.SimpleTCP;
+using CrowdControl.Common;
 using JetBrains.Annotations;
 using ConnectorType = CrowdControl.Common.ConnectorType;
 
 namespace CrowdControl.Games.Packs.DeusEx;
 
 [UsedImplicitly]
-public class DeusEx : SimpleTCPPack
+public class DeusEx : SimpleTCPPack<SimpleTCPServerConnector>
 {
     public override string Host => "0.0.0.0";
 
@@ -15,7 +16,7 @@ public class DeusEx : SimpleTCPPack
 
     public DeusEx(UserRecord player, Func<CrowdControlBlock, bool> responseHandler, Action<object> statusUpdateHandler) : base(player, responseHandler, statusUpdateHandler) { }
 
-    public override Game Game { get; } = new("Deus Ex Randomizer", "DeusEx", "PC", ConnectorType.SimpleTCPConnector);
+    public override Game Game { get; } = new("Deus Ex Randomizer", "DeusEx", "PC", ConnectorType.SimpleTCPServerConnector);
 
     public override EffectList Effects { get; } = new Effect[]
     {
