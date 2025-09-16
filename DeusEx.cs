@@ -1,4 +1,5 @@
-﻿using ConnectorLib.SimpleTCP;
+﻿using System.Diagnostics.CodeAnalysis;
+using ConnectorLib.SimpleTCP;
 using CrowdControl.Common;
 using JetBrains.Annotations;
 using ConnectorType = CrowdControl.Common.ConnectorType;
@@ -12,6 +13,7 @@ public class DeusEx : SimpleTCPPack<SimpleTCPServerConnector>
 
     public override ushort Port => 43384;
 
+    [SuppressMessage("PackMetadata", "CC1007:Message Format Property")]
     public override ISimpleTCPPack.MessageFormatType MessageFormat => ISimpleTCPPack.MessageFormatType.CrowdControlLegacy;
 
     public DeusEx(UserRecord player, Func<CrowdControlBlock, bool> responseHandler, Action<object> statusUpdateHandler) : base(player, responseHandler, statusUpdateHandler) { }
