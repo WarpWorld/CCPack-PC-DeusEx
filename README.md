@@ -1,5 +1,11 @@
 # Deus Ex Randomizer
 
+## Pack metadata
+- **Game display name:** Deus Ex Randomizer
+- **Crowd Control game ID:** `DeusEx`
+- **Connector type:** `SimpleTCPServerConnector`
+
+
 This directory contains the Crowd Control pack side of the **Deus Ex
 Randomizer** integration. It is not a standalone Deus Ex mod or installer.
 The game-side integration belongs to the Deus Ex Randomizer project:
